@@ -1,0 +1,9 @@
+<mvc:View controllerName="sap.app.controller.SupplierData"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m">
+  <Page >
+    <content>
+      <Text text="End view"></Text>
+    </content>
+  </Page>
+</mvc:View>

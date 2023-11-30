@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" 
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-theme="sap_bluecrystal"
+      data-sap-ui-bindingSyntax="complex"
+      data-sap-ui-resourceroots='{ 
+            "sap.app": "./"
+        }'>
+    </script>
+    <script>
+      let oCompContainer = new sap.ui.core.ComponentContainer({
+        name: "sap.app"
+      })
+      oCompContainer.placeAt('mainDiv')
+      // let oView = new sap.ui.view({
+      //   viewName: 'ibm.fin.ar.view.Main',
+      //   type: 'XML'
+      // })
+      // oView.placeAt('mainDiv')
+    </script>
+  </head>
+  <body>
+      <div id="mainDiv"></div>
+  </body>
+</html>

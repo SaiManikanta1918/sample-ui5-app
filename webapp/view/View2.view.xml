@@ -1,0 +1,28 @@
+<mvc:View xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" controllerName="sap.app.controller.View2">
+	<Page title="{local>name}" showNavButton="true" navButtonPress="onPageGoToPreviousNavButtonPress">
+		<!-- <Button text="Go to previous" press="onGoToPreviousButtonPress" /> -->
+		<ObjectHeader title="{local>name}" intro="{local>healthBenefit}" number="{local>price}" numberUnit="{local>currency}" icon="{local>imageURL}"/>
+
+		<IconTabBar >
+			<items>
+				<IconTabFilter text="{i18n>XTIT_MOREDETAILS}" icon="sap-icon://warning">
+					<core:Fragment fragmentName="sap.app.fragments.additionalData" type="XML"/>
+				</IconTabFilter>
+				<IconTabFilter text="Suppliers" icon="sap-icon://supplier">
+					<core:Fragment fragmentName="sap.app.fragments.supplier" type="XML"/>
+				</IconTabFilter>
+				<IconTabFilter text="Cities" icon="sap-icon://home">
+					<core:Fragment fragmentName="sap.app.fragments.cities" type="XML"/>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+		<footer>
+			<Toolbar >
+				<ToolbarSpacer ></ToolbarSpacer>
+				<Button text="save" press="onSaveButtonPress" icon="sap-icon://save"></Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

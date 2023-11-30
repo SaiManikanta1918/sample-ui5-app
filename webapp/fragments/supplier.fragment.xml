@@ -1,0 +1,45 @@
+<c:FragmentDefinition xmlns="sap.m"
+  xmlns:c="sap.ui.core">
+  <Table items="{local>/suppliers}" id="idSuppliersTable" itemPress="onSuppliersTableItemPress">
+    <headerToolbar>
+      <Toolbar >
+        <ToolbarSpacer />
+        <Button icon="sap-icon://filter" press="onButtonSupplierFilterPress"/>
+        <Button text="Reset" press="onResetButtonSupplierFilterPress"/>
+      </Toolbar>
+    </headerToolbar>
+    <columns>
+      <Column>
+        <header>
+          <Text text="Name" />
+        </header>
+      </Column>
+      <Column>
+        <header>
+          <Text text="City" />
+        </header>
+      </Column>
+      <Column>
+        <header>
+          <Text text="Contact" />
+        </header>
+      </Column>
+      <Column>
+        <header>
+          <Text text="Founded In the Year" />
+        </header>
+      </Column>
+    </columns>
+    <items>
+      <ColumnListItem type="Navigation">
+        <cells>
+          <Text text="{local>name}" />
+          <Input value="{local>city}" showValueHelp="true" valueHelpRequest="onCityInputValueHelpRequest"/>
+          <Text text="{local>contactNo}" />
+          <Text text="{local>sinceWhen}" />
+
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+</c:FragmentDefinition>

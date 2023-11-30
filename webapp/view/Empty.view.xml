@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="sap.app.controller.Empty"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+>
+
+  <Page >
+    <content>
+      <Image height="100%" width="100%" src="https://wallpapers.com/images/hd/all-superhero-of-avengers-8umq9c3bffyuqmpb.jpg"></Image>
+    </content>
+  </Page>
+</mvc:View>

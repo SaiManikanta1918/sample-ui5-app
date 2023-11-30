@@ -1,0 +1,43 @@
+<mvc:View xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc" controllerName="sap.app.controller.View1">
+  <Page title="View 1">
+    <headerContent>
+      <Button icon="sap-icon://action" press="onButtonGotoNextPress" />
+    </headerContent>
+
+    <!-- <Button text="Go to next" press="goToNext" />
+        <Text text="{local>/demo}"></Text> -->
+    <SearchField search="onSearchFieldFruitsSearch"/>
+
+    <!-- sorter: {path: 'type', group: true} -->
+    <List id="idFruitsList" items="{path: 'local>/fruits'  }" selectionChange="onFruitsListItemSelectionChange" mode="SingleSelectMaster">
+      <!-- <DisplayListItem value="Apple" label="Best Antibiotic"></DisplayListItem>
+                <StandardListItem icon="https://www.jiomart.com/images/product/original/590000070/pineapple-queen-1-pc-approx-700-g-1200-g-product-images-o590000070-p590000070-0-202203170357.jpg?im=Resize=(420,420)" description="Rich in vitamin chealthy for skin" title="Pineapple"></StandardListItem>
+                <InputListItem >
+                    <HBox >
+                        <Text class="sapUiSmallMarginTop" text="Which fruit do you like?"></Text>
+                        <Input width="5rem"></Input>
+                    </HBox>
+                </InputListItem>
+                <CustomListItem >
+                    <Text class="sapUiSmallMarginTop" text="Do you like fresh fruits ?"></Text>
+                    <Switch ></Switch>
+                </CustomListItem> -->
+      <ObjectListItem title="{local>name}" icon="{local>imageURL}" intro="{local>type}" number="{local>price}" numberUnit="{local>currency}">
+        <firstStatus>
+          <ObjectStatus text="{local>status}" state="{
+                            path: 'local>status', formatter: '.formatter.getFruitStatus'}"></ObjectStatus>
+        </firstStatus>
+      </ObjectListItem>
+      <!-- <FeedListItem sender="joe biden" text="Hey!!" timestamp="New Year 2024" icon="https://pyxis.nymag.com/v1/imgs/27b/4d9/a3e90da46580db5ec6ee3e8061c85ae3cf-joe-biden.rsquare.w700.jpg"></FeedListItem>
+                <ActionListItem text="Order now" press="onOrder"></ActionListItem> -->
+    </List>
+
+    <footer>
+      <OverflowToolbar >
+        <ToolbarSpacer ></ToolbarSpacer>
+        <Button text="Show Selected items" press="onShowSelectedItemsButtonPress" type="Accept" />
+      </OverflowToolbar>
+    </footer>
+  </Page>
+</mvc:View>
